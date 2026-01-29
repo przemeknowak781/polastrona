@@ -642,7 +642,7 @@ a {
 
 .portfolio-item-1:hover img,
 .portfolio-item-2:hover img {
-    filter: grayscale(0%);
+    filter: grayscale(50%);
 }
 
 .portfolio-content {
