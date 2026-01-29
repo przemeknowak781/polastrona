@@ -608,7 +608,7 @@ a {
 
 .marquee-text {
     font-family: var(--font-heading);
-    font-size: clamp(4rem, 12vw, 10rem);
+    font-size: clamp(5rem, 16vw, 14rem);
     font-weight: 400;
     color: var(--color-primary);
     white-space: nowrap;
@@ -634,8 +634,15 @@ a {
     object-fit: cover;
 }
 
-.portfolio-item-1 img {
+.portfolio-item-1 img,
+.portfolio-item-2 img {
     filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.portfolio-item-1:hover img,
+.portfolio-item-2:hover img {
+    filter: grayscale(0%);
 }
 
 .portfolio-content {
@@ -707,6 +714,11 @@ a {
 
 .electric-img-1 img {
     filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.electric-img-1:hover img {
+    filter: grayscale(0%);
 }
 
 /* ===========================
@@ -816,7 +828,7 @@ a {
 }
 
 .footer-logo {
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     font-size: 1.4rem;
     font-weight: 400;
     text-transform: uppercase;
@@ -931,24 +943,67 @@ a {
         display: flex;
     }
 
-    /* Hero mobile adjustments */
+    /* Hero mobile adjustments - Stacked Layout */
+    .hero {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .hero-img {
+        position: relative;
+        height: 50vh;
+        inset: auto;
+        width: 100%;
+    }
+
+    .hero-overlay {
+        height: 50vh;
+        bottom: auto;
+    }
+
     .hero-logo {
-        font-size: clamp(1.8rem, 8vw, 3rem);
-        bottom: 2vh;
+        position: relative;
+        font-size: clamp(2rem, 10vw, 3.5rem);
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin: 1.5rem auto 1rem;
+        width: 90%;
+        color: var(--color-primary);
+        text-shadow: none;
     }
 
     .hero-content-box {
+        position: relative;
         top: auto;
-        bottom: 15vh;
+        bottom: auto;
         transform: none;
-        right: 1rem;
-        left: 1rem;
+        right: auto;
+        left: auto;
+        width: 100%;
         max-width: none;
-        padding: 2rem;
+        padding: 2.5rem 1.5rem;
+        background: var(--color-bg);
+        color: var(--color-text);
+        box-shadow: none;
     }
 
     .hero-headline {
-        font-size: 1.5rem;
+        font-size: 2rem;
+        color: var(--color-text);
+    }
+
+    .hero-subtext {
+        color: #444;
+    }
+
+    .hero-cta {
+        background: var(--color-primary);
+        color: var(--color-text-light);
+        width: 100%;
+        justify-content: center;
     }
 
     .hero-scroll {

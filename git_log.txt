@@ -1,0 +1,25 @@
+--- REMOTE --- 
+origin	https://github.com/przemeknowak781/polastrona.git (fetch)
+origin	https://github.com/przemeknowak781/polastrona.git (push)
+--- STATUS --- 
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    deploy.ps1
+	deleted:    deploy_log.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	debug_git.bat
+	debug_git.ps1
+	git_log.txt
+	git_state.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+--- PUSH MAIN --- 
+To https://github.com/przemeknowak781/polastrona.git
+ * [new branch]      main -> main
+--- PUSH GHPAGES --- 
+error: src refspec gh-pages does not match any
+error: failed to push some refs to 'https://github.com/przemeknowak781/polastrona.git'
