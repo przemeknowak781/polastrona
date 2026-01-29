@@ -1,0 +1,145 @@
+/* Animations */
+
+/* Fade in on load */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.45s; }
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll Reveal */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Image hover effects with grayscale transition */
+.portfolio-item img,
+.electric-img-1 img,
+.electric-img-2 img,
+.contact-image img {
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.portfolio-item:hover img,
+.electric-img-1:hover img,
+.electric-img-2:hover img {
+    transform: scale(1.05);
+}
+
+/* Grayscale to color on hover */
+.portfolio-item-1 img,
+.electric-img-1 img {
+    filter: grayscale(100%);
+}
+
+.portfolio-item-1:hover img,
+.electric-img-1:hover img {
+    filter: grayscale(0%);
+}
+
+/* Subtle hover on frames */
+.intro-img-frame {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.intro-img-frame:hover {
+    transform: rotate(-2deg);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.intro-img-frame img {
+    transition: filter 0.6s ease;
+}
+
+.intro-img-frame:hover img {
+    filter: grayscale(0%);
+}
+
+/* Service cards hover */
+.service-card {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateX(10px);
+}
+
+/* Marquee animation (optional) */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.portfolio-marquee.animate {
+    animation: marquee 20s linear infinite;
+}
+
+/* Button pulse */
+.btn-cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-cta::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-cta:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Smooth section transitions */
+section {
+    will-change: opacity;
+}
+
+/* Logo text subtle animation */
+.logo-text {
+    animation: logoFloat 4s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+    0%, 100% { transform: rotate(-5deg) translateY(0); }
+    50% { transform: rotate(-5deg) translateY(-10px); }
+}
